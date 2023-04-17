@@ -4,9 +4,10 @@
 
 ## Projeto ##
 Esse projeto foi construído com o propósito de gerenciar as tarefas diversas de um usuário. 
+* É necessário ter o mySQL Server instalado para executar a aplicação. 
 * Credenciais do banco:
-  * login: root
-  * senha: root
+  * user: root
+  * password: root
 
 * Funcionalidades contempladas:
   * Cadastro, edição, exclusão de tarefas.
