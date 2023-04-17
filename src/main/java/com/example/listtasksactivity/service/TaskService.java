@@ -61,14 +61,18 @@ public class TaskService implements ITaskService {
 
     public int getNextOrdenationPosition(){ return taskRepository.getNextOrdenationPosition(); }
 
+    public int getNextOrdenation(int position){ return taskRepository.getNextOrdenation(position); }
+
+    public int getPreviousOrdenation(int position){ return taskRepository.getPreviousOrdenation(position); }
+
     public void orderTask(Task task, String operation){
         int taskPosition = task.getOrdenationPosition();
         long position = 0;
         if("down".equals(operation)){
-            position = task.getOrdenationPosition() + 1;
+            position = taskRepository.getPreviousOrdenation(task.getOrdenationPosition());
         }
         if("up".equals(operation)){
-            position = task.getOrdenationPosition() - 1;
+            position = taskRepository.getNextOrdenation(task.getOrdenationPosition());
         }
         long idTaskToReplace = taskRepository.findTarget(position);
         Optional<Task> taskToReplace = getTaskById(idTaskToReplace);

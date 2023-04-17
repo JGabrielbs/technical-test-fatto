@@ -29,4 +29,9 @@ public interface ITaskService {
 
     void orderTask(Task task, String operation);
 
+    int getNextOrdenation(int position);
+
+    int getPreviousOrdenation(int position);
+
+
 }
