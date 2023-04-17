@@ -4,6 +4,10 @@
 
 ## Projeto ##
 Esse projeto foi construído com o propósito de gerenciar as tarefas diversas de um usuário. 
+* Credenciais do banco:
+  * login: root
+  * senha: root
+
 * Funcionalidades contempladas:
   * Cadastro, edição, exclusão de tarefas.
   * Reordenação de tarefas
